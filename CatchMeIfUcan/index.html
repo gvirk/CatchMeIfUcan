@@ -1,151 +1,173 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
     <title>Impress Demo</title>
-    <!-- CSS Selection-->
-
-    <link href="css/game.css" rel="stylesheet" />
+    <!-- CSS section-->
     <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/game.css" rel="stylesheet" />
 </head>
-<body onload="main();">
+<body onload="main()">
     <div id="impress">
-        <div id="20" class="step slide" >
+        <!--SLIDE 1-->
+        <div id="1" class="step slide">
             <div class="slide-text">
-                <div class="top"> Firse khelne agea saale?</div>
-                <div class="bottom"><a class="btn"  href="#1">aaja mar shuru kar</a></div>
+                <p>Start here and evade...  </p><br />
+                <p>Run towards Downtown</p>  <!--2.1 level-->
+                <p><a href="#3-left"> choose 1</a></p><br />
+                <p> Run towards countryside<br /></p>   <!--2.2 level-->
+                <p><a href="#3-right">choose 2</a></p>
             </div>
         </div>
-        <!--First Slide-->
-        <div id="1" background="data:image/jpeg;base64,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" class="step slide" data-x="-13500">
+        <!--................LEFT SIDE.............-->
+        <div id="3-left" class="step slide" data-x="1500" data-y="1500" data-z="1500">
             <div class="slide-text">
-                <p> 1 There's a time machine over there. Flip the switch?</p>
-                <p><a class="btn"  href="#2">slide 2</a> it.</p>
-                <p><a class="btn"  href="#3">slide 3</a></p>
-            </div>
-        </div>
-        <!--Second Slide-->
-        <div id="2" class="step slide" data-x="-1500">
-            <div class="slide-text">
-                <p>2  slide There's a time machine over there. Flip the switch?</p>
-                <p><a class="btn"  href="#4">4 slide</a> it.</p>
-                <p><a class="btn"  href="#5">5 slide</a></p>
-            </div>
-            </div>
-            <!--Third Slide-->
-            <div id="3" class="step slide" data-x="3500">
-                <div class="slide-text">
-                    <p>3  slide There's a time machine over there. Flip the switch?</p>
-                </div>
-                <div id="menu"><p><a class="btn"  href="#6">4th slide</a> it.</p>
-<p><a class="btn"  href="#7">7 slide</a></p></div>
+                <p>CHOICE 1: turn right  </p><br />
+                <p><a href="#youLose1">CHOOSE 1</a></p><br /><br />  <!--3.1 level-->
+                <p>CHOICE 2: turn left  </p>
+                <p><a href="#youLose2">CHOOSE 2</a></p>   <!--3.2  level--><br />
+
 
             </div>
-        <!--fourth Slide-->
-        <div id="4" class="step slide" data-y="1500">
-            <div class="slide-text">
-                <p> 4 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><p><a class="btn"  href="#8">8 slide</a> it.</p>
-<p><a class="btn"  href="#9">9 slide</a></p></div>
-
         </div>
-        <!--fifth Slide-->
-        <div id="5" class="step slide" data-y="-1500">
-            <div class="slide-text">
-                <p> 5 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><p><a class="btn"  href="#10">10 slide</a> it.</p>
-<p><a class="btn"  href="#11">11 slide</a></p></div>
 
-        </div>
-        <!--sixth Slide-->
-        <div id="6" class="step slide" data-x="5000">
-            <div class="slide-text">
-                <p>  6 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><p><a class="btn"  href="#12">12 slide</a> it.</p>
-<p><a class="btn"  href="#13">13 slide</a></p></div>
 
-        </div>
-        <!--Seventh Slide-->
-        <div id="7" class="step slide" data-x="6600">
-            <div class="slide-text">
-                <p> 7 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><p><a class="btn"  href="#14">3rd slide</a> it.</p>
-<p><a class="btn"  href="#15">4th slide</a></p></div>
 
-        </div>
-        <!--eight Slide-->
-        <div id="8" class="step slide" data-y="3000">
+        <!--LOSE 1 AND 2-->
+        <div id="youLose1" class="step slide" data-x="3000" data-y="1500" data-z="1500">
             <div class="slide-text">
-                <p> 8 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu">Game Over</div>
+                <p>CHOICE 1: You found the box ?</p><p>Huraayyyyyy !!! Go ahead and open it !!</p>
+                <p><a href="#noKey">CHOOSE 1</a></p><br /><br />  <!--3.1 level-->
+                <p>CHOICE 2: couldn't find the box?? </p>
+                <p><a href="#noBox">CHOOSE 2</a></p><br /><br />  <!--3.1 level-->
 
+
+
+            </div>
         </div>
-        <!--ninth Slide-->
-        <div id="9" class="step slide" data-x="9500" data-y="3000">
+        <div id="youLose2" class="step slide" data-x="8500" data-y="1500" data-z="1500">
             <div class="slide-text">
-                <p> 9 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><a class="btn"  href="#1">Game Over</a></div>
+                <p>you are stuck due to traffic light</p>
+                <p><a href="#noKey">CHOOSE 1</a></p><br /><br />  <!--3.1 level-->
+                <p>CHOICE 2: you stuck under traffic jam </p>
+                <p><a href="#noKey">CHOOSE 2</a></p><br /><br />  <!--3.1 level-->
 
+
+
+            </div>
         </div>
-        <!--Tenth Slide-->
-        <div id="10" class="step slide" data-x="0" data-y="9500">
+
+        <!--noKey and noBox-->
+        <div id="noKey" class="step slide" data-x="4500" data-y="1500" data-z="1500">
             <div class="slide-text">
-                <p> 10 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><a class="btn"  href="#1">game over</a></div>
+                <p>
+                    You lose !!<br>
+                
 
+                START AGAIN !
+                </p><br />
+                <div class="menu"><p><a href="#1">START OVER</a></p></div>
+
+            </div>
         </div>
-        <!--eleven Slide-->
-        <div id="11" class="step slide" data-x="10500">
+
+        <div id="noBox" class="step slide" data-x="6500" data-y="1500" data-z="160">
             <div class="slide-text">
-                <p> 11 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><a class="btn"  href="#1">Game Over</a></div>
+                <p>You lose</p><br />
 
+                <div class="menu"><p><a href="#1">START OVER</a></p></div>
+
+            </div>
         </div>
-        <!--twelve Slide-->
-        <div id="12" class="step slide" data-x="0" data-y="-3000">
+
+
+        <!--.....................RIGHT SIDE...................................-->
+        <!--SLIDE 3-->
+        <div id="3-right" class="step slide" data-x="-1500" data-y="-1500" data-z="-1500">
             <div class="slide-text">
-                <p> 12 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><a class="btn"  href="#1">game over</a></div>
+                <p>CHOICE 1: look for a digger and dig under the tree in front of the boat </p>
+                <p><a href="#youLose3">CHOOSE 1</a></p><br /><br />  <!--3.3 level-->
+                <p>CHOICE 2: dig under the tree standing in front of two large rocks placed adjacent to each other </p>
+                <p><a href="#youLose4">CHOOSE 2</a></p><br /><br />  <!--3.4 level-->
 
+
+
+            </div>
         </div>
-        <!--Thirteen Slide-->
-        <div id="13" class="step slide" data-x="0" data-y="-5000">
+
+        <!--LOSE 3 AND 4-->
+        <div id="youLose3" class="step slide" data-x="-3000" data-y="-1500" data-z="-1500">
             <div class="slide-text">
-                <p> 13 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><a class="btn"  href="#1">game over</a></div>
+                <p>CHOICE 1: You found the key?</p><p>Huraayyyyyy !!! Go look for the box now !!</p><br />
+                <p>It is under a tree standing betwwen to large rocks !!</p>
+                <p><a href="#mightWin">CHOOSE 1</a></p><br /><br />  <!--3.1 level-->
+                <p>CHOICE 2: couldn't find the key?? </p><p>You are trapped !!</p>
+                <div class="menu"><p><a href="#1">START OVER</a></p></div>
 
+
+
+            </div>
         </div>
-        <!--fourteen Slide-->
-        <div id="14" class="step slide" data-x="0" data-y="-10500">
+        <div id="mightWin" class="step slide" data-x="-4500" data-y="-1500" data-z="-1500">
             <div class="slide-text">
-                <p> 14 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><a class="btn"  href="#1">Game Over</a></div>
+                <p>Dig under taller tree</p><br /><p>found the box??</p>
+                <br /><p>Did you get the key?</p>
+                <p><a href="#WIN">YES</a></p><br /><br />  <!--3.3 level-->
+                <!--...................WIN CASE ................-->
+                <br />
+                <p><a href="#noKey">NO</a></p><br /><br />  <!--3.4 level-->
 
+
+
+            </div>
         </div>
-        <!--fifteen Slide-->
-        <div id="15" class="step slide" data-x="-10500" data-y="-10500">
+
+        <div id="youLose4" class="step slide" data-x="-9500" data-y="-1500" data-z="-3000">
             <div class="slide-text">
-                <p> 15 There's a time machine over there. Flip the switch?</p>
-            </div>
-            <div id="menu"><a class="btn"  href="#20">win</a></div>
+                <p>Dig under taller tree</p><br /><p>found the box??</p>
+                <br /><p>Did you get the key?</p>
+                <p><a href="#lie">YES</a></p><br /><br />  <!--3.3 level-->
 
+                <br />
+                <p><a href="#noKey">NO</a></p><br /><br />  <!--3.4 level-->
+
+
+
+            </div>
         </div>
-  </div>
-    <!--JavaScript Selection -->
-    <script src="Scripts/lib/impress.js"></script>
-    <script src="Scripts/lib/game.js"></script>
+        <div id="lie" class="step slide" data-x="-500" data-y="-2500" data-z="-3500">
+            <div class="slide-text">
+                <p>Sorry !!</p>
+                <br /><p>You don't have the key</p><br /><p>You lied..</p><br />
+
+
+                <div class="menu"><p><a href="#1">START OVER</a></p></div>
+
+
+            </div>
+        </div>
+
+
+        <div id="WIN" class="step slide" data-x="-6500" data-y="-1500" data-z="-6560">
+            <div class="slide-text">
+                <p>CONGRATULATIONS !!</p>
+                <p>You found the box !!</p><br />
+
+                <p>YOU WON !! :-)</p><br />
+
+                <div class="menu"><p><a href="#1">START OVER</a></p></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Javascript section-->
+
+    <script src="scripts/lib/impress.js"></script>
+    <script>impress().init();</script>
+    <script src="scripts/lib/game.js"></script>
 </body>
 </html>
