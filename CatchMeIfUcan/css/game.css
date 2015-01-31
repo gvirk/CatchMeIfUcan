@@ -15,15 +15,12 @@
 .step {
     width: 900px;
     padding: 40px;
-
     -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    -ms-box-sizing:     border-box;
-    -o-box-sizing:      border-box;
-    box-sizing:         border-box;
-
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
     font-family: 'PT Serif', georgia, serif;
-
     font-size: 48px;
     line-height: 1.5;
 }
@@ -59,7 +56,7 @@
 
     border-radius: 10px;
 
-    background-color: white;
+    background-image: url('img/bg.png');
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     border: 1px solid rgba(0, 0, 0, .3);
@@ -117,5 +114,26 @@ height:30%;
 width:100%;
 float:left;
 text-align: center;}
-.slide-text{
-height:100%}
+
+.slide-text {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    color: #fbfbfb;
+    height: 100%;
+    padding: 20px;
+}
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
